@@ -14,7 +14,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Tests\TestCase;
 
-class RelationshipsTest extends TestCase
+class clearRelationshipsTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -25,6 +25,7 @@ class RelationshipsTest extends TestCase
         $response = $this->actingAs($user)->post('/tasks', [
             'name' => 'Some task'
         ]);
+
         $response->assertStatus(200);
     }
 
